@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div class="login-form">    
+    <form  method="post" >
+		<div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+        <h4 class="modal-title">Register Your Account</h4>
+        <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" ng-model="first_name" required="required">
+        </div>
+        <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" ng-model="last_name" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" ng-model="username" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" ng-model="password" required="required">
+        </div>
+        <div class="form-group">
+                <input type="password" class="form-control" placeholder="Re-enter Password" ng-model="re_password" required="required">
+        </div>
+    
+        <input type="button" class="btn btn-primary btn-block btn-lg" value="Register" ng-click="register(first_name,last_name,username,password,re_password)">             
+    </form>			
+</div>
