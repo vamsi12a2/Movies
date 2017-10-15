@@ -14,5 +14,5 @@ $(document).ready(function(){
     });
     $('#pagination a').click(function(e){
         console.log("click "+e)
-    })
+    });
 });

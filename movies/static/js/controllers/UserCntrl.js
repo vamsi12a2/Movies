@@ -1,19 +1,22 @@
 angular.module("movies").
-controller('UserCntrl',['$scope','Auth','$location','$http',function($scope,Auth,$location,$http){
-    var page = Math.floor((Math.random() * 10) + 1);
-    $scope.$watch('viewContentLoaded', function(){
-    var apikey = "abbd4440b5238f02bea5283369797d70"
-    $http({
-        method:"GET",
-        url:"https://api.themoviedb.org/3/discover/movie?page="+page+"&sort_by=popularity.desc&api_key="+apikey
-    }).then(function(res){
-        $scope.data = res.data
-    },function(res){
-        console.log(res)
-    })
-    
- })
+controller('UserCntrl',['$scope','Auth','$location','$http','User',function($scope,Auth,$location,$http,User){
+ 
+    User.get_page().then(function(res){
+       $scope.data = res.data
+   })     
+    $scope.goto = function(path){
+        $location.path(path)
+    }   
+    $scope.logout = function(){
+        Auth.logout().then(function(res){
+            $location.path("/")
+        })
+    }
+    $scope.reload = function(){
+
+        User.get_page().then(function(res){
+            $scope.data = res.data
+        })     
+    }
 
 }])
-
-

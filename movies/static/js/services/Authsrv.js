@@ -30,7 +30,15 @@ service("Auth",['$http',function($http){
         
             }
         
+    this.logout = function(){
 
+        return $http({
+            url:'./logout',
+            method:'get'
+        }).then(function(res){
+            return res
+        })
+    }
     return this;
 
 }])

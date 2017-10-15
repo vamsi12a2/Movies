@@ -94,6 +94,8 @@ body {
         font-size: 19px;
     }
 	table.table .avatar {
+        clear: both;
+        overflow: hidden;
 		border-radius: 50%;
 		vertical-align: middle;
 		margin-right: 10px;
@@ -102,7 +104,7 @@ body {
 		font-size: 30px;
 		margin: 2px 2px 0 0;
 		display: inline-block;
-		vertical-align: middle;
+        vertical-align: middle;
 		line-height: 10px;
 	}
     .text-success {
@@ -157,12 +159,13 @@ body {
     
     	.search-box {
         position: relative;
-        float: right;
+        float: left;
+        margin-left:120px;
     }
 	.search-box .input-group {
 		min-width: 300px;
-		position: absolute;
-		right: 0;
+        position: absolute;
+        right: 0;
 	}
 	.search-box .input-group-addon, .search-box input {
 		border-color: #ddd;
@@ -195,4 +198,11 @@ body {
         font-size: 19px;
         position: relative;
         top: 2px;
+    }
+    .btn 
+    {
+        border-radius: 0px;
+    }
+    span{
+        display: inline-block;
     }

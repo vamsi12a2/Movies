@@ -9,6 +9,7 @@ controller('RegisterCntrl',['$scope','Auth','$location',function($scope,Auth,$lo
             Auth.register(first_name,last_name,username,password).then(
                 function(res)
                 {
+                    console.log(res.status)
                     $location.path("/")
                 }
             )

@@ -12,4 +12,8 @@ controller('LoginCntrl',['$scope','Auth','$location',function($scope,Auth,$locat
             }
         )
     }
+
+    $scope.goto = function(path){
+        $location.path(path)
+    } 
 }])
