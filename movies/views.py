@@ -15,9 +15,6 @@ class register_view(APIView):
        return Response(status=status.HTTP_200_OK)
 
 
-
-
-
 class movies_view(APIView):
     def post(self,request,format=None):
         apikey = "abbd4440b5238f02bea5283369797d70"
@@ -25,12 +22,6 @@ class movies_view(APIView):
         data = json.JSONEncoder().encode(res.json())
         print(data)
         return Response(data)
-    def get(self,request,format=None):
-        apikey = "abbd4440b5238f02bea5283369797d70"
-        res  = requests.get("http://api.themoviedb.org/3/discover/movie?page=6&sort_by=popularity.desc&api_key="+apikey)
-        data = json.JSONEncoder().encode(res.json())
-        print("hello")
-        return render(request,'user.html',{'content':data})
 
 
 class index_view(TemplateView):
