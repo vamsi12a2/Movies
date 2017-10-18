@@ -1,4 +1,7 @@
-It helps users to browse through movies pulled from TMDB API.
+This is Demo app using Django Framework.
+
+This application helps users to browse through movies that are pulled from TMDB API.
+
 
 Screenshots:
 
